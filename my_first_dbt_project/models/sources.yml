@@ -1,0 +1,9 @@
+sources:
+  - name: main
+    tables:
+      - name: index_constituents
+        description: 'Index constituents'
+      - name: price_daily1
+        description: 'Daily price data for the index constituents 1'
+      - name: price_daily2
+        description: 'Daily price data for the index constituents 2'
