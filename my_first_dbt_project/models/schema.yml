@@ -1,0 +1,28 @@
+models:
+  - name: price_daily_merged
+    tests:
+      - price_validation_generic:
+          where: "high < low or high < open or high < close"
+      - price_range_generic:
+          min_price: 0
+          max_price: 100000
+          column_name: close
+          severity: warn
+    columns:
+      - name: ticker
+        description: ticker
+        tests:
+          - not_null
+
+  - name: kospi200_consitituents_daily
+  - name: price_of_kospi200_daily
+    description: KOSPI200 price daily data
+    tests:
+      - price_validation_generic:
+          where: "high < low or high < open or high < close"
+      - price_range_generic:
+          min_price: 0
+          max_price: 100000
+          column_name: close
+          severity: warn
+
